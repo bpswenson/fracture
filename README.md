@@ -11,11 +11,17 @@ Build config: +assertions
 Note: make -j needs to be fixed but the number of targets is small so just use `make`
 
 git clone git@github.com:bpswenson/fracture.git
+
 cd fracture && mkdir build && cd build && cmake .. && make
+
 ./test/test_lib
+
 Before function call: 1
+
 After function call: 2
+
 Before undo function call: 2
+
 After undo function call: 1
 
 
