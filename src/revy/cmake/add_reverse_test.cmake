@@ -11,7 +11,7 @@ function(add_reverse_test TARGET_NAME)
         add_custom_command(
             OUTPUT ${BC_FILE}
             COMMAND clang++ -emit-llvm -c ${SRC} -o ${BC_FILE} 
-            DEPENDS ${SRC}
+            DEPENDS ${SRC} reverse_pass
             COMMENT "Compiling ${SRC} to LLVM bitcode (${BC_FILE})"
         )
         list(APPEND BC_FILES ${BC_FILE})

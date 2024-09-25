@@ -8,11 +8,9 @@ Thread model: posix
 InstalledDir: /home/bswenson3/software/llvm/bin
 Build config: +assertions
 
-Note: make -j needs to be fixed but the number of targets is small so just use `make`
-
 git clone git@github.com:bpswenson/fracture.git
 
-cd fracture && mkdir build && cd build && cmake .. && make
+cd fracture && mkdir build && cd build && cmake .. && make -j
 
 ./test/test_lib
 
